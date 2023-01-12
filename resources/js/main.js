@@ -59,7 +59,7 @@ const validateCred = arr => {
     sum += checkedArr[j];
     }
    // will return true for valid, false for invalid
-   return sum % 10 === 0 ? true : false;
+   return sum % 10 === 0;
 };
 
 const findInvalidCards = nestedArr => {
@@ -72,9 +72,6 @@ const findInvalidCards = nestedArr => {
     } 
   }
   ); 
-  
-  console.log('Invalid credit cards found in batch shown below:');
-  console.log(invalidBatch);
   return invalidBatch;   // return an array of Invalids
 }; // Ends findInvalidCards function.
 
