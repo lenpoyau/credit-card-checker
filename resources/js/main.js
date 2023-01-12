@@ -133,6 +133,22 @@ const idInvalidCardCompanies = nestedInvalidArr => {
     return cardCompanies;
 }; // Ends idInvalidCardCompanies function
 
+// Project extra challenge and extention
+// Take a string of credit number and converts to digit array
+const convertStrToArr = str => {
+    let cardStrArr = str.split('');
+    const numArr = cardStrArr.map(char => parseInt(char,10));
+  return numArr;
+};
+
+// Let us do some testing below:
 // Let us find invalid cards from the batch of cards
 const invalidCards = findInvalidCards(batch);
 idInvalidCardCompanies(invalidCards);
+
+console.log(validateCred(invalid1)); // Should print false
+console.log(validateCred(valid1));  // Should print true
+
+
+// convert passed in string to an array of credit card digits
+convertStrToArr('4532626801090847');
